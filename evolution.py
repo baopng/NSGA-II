@@ -3,8 +3,8 @@ from population import Population
 
 class Evolution:
 
-    def __init__(self, problem, num_of_generations=1000, num_of_individuals=100):
-        self.utils = NSGA2Utils(problem, num_of_individuals)
+    def __init__(self, problem, num_of_generations=2000, num_of_individuals=100, num_of_tour_particips=2, tournament_prob=0.9, crossover_param=2, mutation_param=5):
+        self.utils = NSGA2Utils(problem, num_of_individuals, num_of_tour_particips, tournament_prob, crossover_param, mutation_param)
         self.population = None
         self.num_of_generations = num_of_generations
         self.on_generation_finished = []

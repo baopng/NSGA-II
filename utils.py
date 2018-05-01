@@ -4,7 +4,7 @@ import random
 class NSGA2Utils:
 
     def __init__(self, problem, num_of_individuals=100,
-                 num_of_tour_particips=2, tournament_prob = 0.9, crossover_param=2, mutation_param=5):
+                 num_of_tour_particips=2, tournament_prob=0.9, crossover_param=2, mutation_param=5):
 
         self.problem = problem
         self.num_of_individuals = num_of_individuals
