@@ -1,5 +1,5 @@
-from problem import Problem
-from evolution import Evolution
+from nsga2.problem import Problem
+from nsga2.evolution import Evolution
 import matplotlib.pyplot as plt
 
 def f1(x):

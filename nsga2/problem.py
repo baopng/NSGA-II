@@ -1,4 +1,4 @@
-from individual import Individual
+from nsga2.individual import Individual
 import random
 
 class Problem:

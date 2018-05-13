@@ -30,7 +30,7 @@ This implementation can be used to solve multivariate (more than one dimensions)
 
     1. Arguments:
         * `problem`: An object of class Problem.
-        * `num_of_generations`: An integer, default = 2000, representing the number of generations.
+        * `num_of_generations`: An integer, default = 1000, representing the number of generations.
         * `num_of_individuals`: An integer, default = 100, representing the number of individuals, a.k.a the population size.    
         * `num_of_tour_particips`: An integer, default = 2, representing the number of participants in tournament selection operator.
         * `tournament_prob`: A real number, default = 0.9, representing the probability used in tournament selection.
@@ -42,12 +42,20 @@ This implementation can be used to solve multivariate (more than one dimensions)
             * Return: List of the best individuals in the last generation.
 
 ## Example
-An example about SCH problem is showed in _sch.py_.
+Examples about SCH problem and KUR problem are showed in _sch.py_ and _kur.py_.
 
 In addition, the results of some popular multi-objective problems is demonstrated as belows:
 
-* SCH ![SCH](pic/SCH.png)
-* KUR ![KUR](pic/KUR.png)
-* ZDT1 ![ZDT1](pic/ZDT1.png)
-* ZDT4 ![ZDT4](pic/ZDT4.png)
-* VIENNET ![VIENNET](pic/VIENNET.png)
+* SCH ![SCH](pictures/SCH.png)
+* KUR ![KUR](pictures/KUR.png)
+* ZDT1 ![ZDT1](pictures/ZDT1.png)
+* ZDT4 ![ZDT4](pictures/ZDT4.png)
+* VIENNET ![VIENNET](pictures/VIENNET.png)
+
+## Authors
+* Pham Ngo Gia Bao, Ho Chi Minh University of Technology
+* Tram Loi Quan, Ho Chi Minh University of Technology
+* A/Prof. Quan Thanh Tho, Ho Chi Minh University of Technology (advisor)
+* A/Prof. Akhil Garg, Shantou University (advisor)
+
+We are very thankful to A/Prof. Tho and A/Prof. Akhil for helping and guiding us to finish this work.
