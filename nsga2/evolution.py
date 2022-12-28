@@ -1,5 +1,6 @@
 from nsga2.utils import NSGA2Utils
 from nsga2.population import Population
+from tqdm import tqdm
 
 class Evolution:
 
@@ -17,7 +18,7 @@ class Evolution:
             self.utils.calculate_crowding_distance(front)
         children = self.utils.create_children(self.population)
         returned_population = None
-        for i in range(self.num_of_generations):
+        for i in tqdm(range(self.num_of_generations)):
             self.population.extend(children)
             self.utils.fast_nondominated_sort(self.population)
             new_population = Population()
