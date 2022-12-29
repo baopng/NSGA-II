@@ -3,17 +3,20 @@ from nsga2.evolution import Evolution
 import matplotlib.pyplot as plt
 import math
 
+
 def f1(x):
     s = 0
-    for i in range(len(x)-1):
-        s += -10*math.exp(-0.2*math.sqrt(x[i]**2 + x[i+1]**2))
+    for i in range(len(x) - 1):
+        s += -10 * math.exp(-0.2 * math.sqrt(x[i] ** 2 + x[i + 1] ** 2))
     return s
+
 
 def f2(x):
     s = 0
     for i in range(len(x)):
-        s += abs(x[i])**0.8 + 5*math.sin(x[i]**3)
+        s += abs(x[i]) ** 0.8 + 5 * math.sin(x[i] ** 3)
     return s
+
 
 problem = Problem(num_of_variables=3, objectives=[f1, f2], variables_range=[(-5, 5)], same_range=True, expand=False)
 evo = Evolution(problem, mutation_param=20)

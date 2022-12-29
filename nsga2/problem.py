@@ -1,6 +1,7 @@
 from nsga2.individual import Individual
 import random
 
+
 class Problem:
 
     def __init__(self, objectives, num_of_variables, variables_range, expand=True, same_range=False):

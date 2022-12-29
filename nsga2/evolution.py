@@ -2,10 +2,13 @@ from nsga2.utils import NSGA2Utils
 from nsga2.population import Population
 from tqdm import tqdm
 
+
 class Evolution:
 
-    def __init__(self, problem, num_of_generations=1000, num_of_individuals=100, num_of_tour_particips=2, tournament_prob=0.9, crossover_param=2, mutation_param=5):
-        self.utils = NSGA2Utils(problem, num_of_individuals, num_of_tour_particips, tournament_prob, crossover_param, mutation_param)
+    def __init__(self, problem, num_of_generations=1000, num_of_individuals=100, num_of_tour_particips=2,
+                 tournament_prob=0.9, crossover_param=2, mutation_param=5):
+        self.utils = NSGA2Utils(problem, num_of_individuals, num_of_tour_particips, tournament_prob, crossover_param,
+                                mutation_param)
         self.population = None
         self.num_of_generations = num_of_generations
         self.on_generation_finished = []
@@ -29,7 +32,7 @@ class Evolution:
                 front_num += 1
             self.utils.calculate_crowding_distance(self.population.fronts[front_num])
             self.population.fronts[front_num].sort(key=lambda individual: individual.crowding_distance, reverse=True)
-            new_population.extend(self.population.fronts[front_num][0:self.num_of_individuals-len(new_population)])
+            new_population.extend(self.population.fronts[front_num][0:self.num_of_individuals - len(new_population)])
             returned_population = self.population
             self.population = new_population
             self.utils.fast_nondominated_sort(self.population)

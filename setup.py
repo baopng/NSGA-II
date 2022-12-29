@@ -9,14 +9,15 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-  name = 'nsga-2',
-  version = '0.1',
-  description = 'A NSGA-II implementation',
-  long_description='A NSGA-II implementation',
-  url='https://github.com/baopng/NSGA-II',
-  author='Pham Ngo Gia Bao, Tram Loi Quan, Quan Thanh Tho, Akhil Garg',
-  author_email='ngogiabaopham@gmail.com',
-  packages = find_packages(exclude=['contrib', 'docs', 'tests']),
-  keywords='nsga2 nsga ga multi-objective',
-  license='MIT',
+    name='nsga-2',
+    version='1.2.0',
+    description='A NSGA-II implementation',
+    long_description='A NSGA-II implementation',
+    url='https://github.com/baopng/NSGA-II',
+    author='Pham Ngo Gia Bao, Tram Loi Quan, Quan Thanh Tho, Akhil Garg',
+    author_email='ngogiabaopham@gmail.com',
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    keywords='nsga2 nsga ga multi-objective',
+    license='MIT',
+    install_requires=['tqdm'],
 )

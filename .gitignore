@@ -1,0 +1,5 @@
+build/
+nsga2.egg-info/
+nsga_2.egg-info/
+.idea/
+dist/
