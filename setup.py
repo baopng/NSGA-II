@@ -19,5 +19,5 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     keywords='nsga2 nsga ga multi-objective',
     license='MIT',
-    install_requires=['tqdm'],
+    install_requires=['tqdm', 'matplotlib'],
 )
